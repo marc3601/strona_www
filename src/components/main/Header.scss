@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap");
+@mixin tablet {
+  @media (max-width: 1000px) {
+    @content;
+  }
+}
+@mixin mobile {
+  @media (max-width: 600px) {
+    @content;
+  }
+}
+.main {
+  min-height: 90vh;
+  border-bottom: 1px solid black;
+  .main_images {
+    display: flex;
+    min-height: 60vh;
+    @include tablet {
+      flex-direction: column;
+      min-height: 80vh;
+    }
+    @include mobile {
+      min-height: 60vh;
+    }
+    .main_right {
+      flex: 1;
+      text-align: center;
+      .laptop {
+        @include tablet {
+          width: 45%;
+          top: 0;
+        }
+        position: relative;
+        opacity: 0;
+        left: 0;
+        top: 50px;
+        width: 75%;
+        animation: laptop 1s ease-in-out 1 0.5s normal forwards;
+        @keyframes laptop {
+          from {
+            transform: translateY(0);
+            opacity: 0;
+          }
+          to {
+            transform: translateY(20px);
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+  .main_left {
+    flex: 1;
+    position: relative;
+    text-align: center;
+    .phone {
+      @include tablet {
+        width: 50%;
+      }
+      position: relative;
+      opacity: 0;
+      left: 0;
+      top: 0;
+      width: 71%;
+      animation: phone 1s ease-in-out 1 normal forwards;
+      @keyframes phone {
+        from {
+          transform: translateY(0);
+          opacity: 0;
+        }
+        to {
+          transform: translateY(20px);
+          opacity: 1;
+        }
+      }
+    }
+  }
+  .main_title {
+    @include tablet {
+      font-size: 2rem;
+      margin: 36px 0 70px;
+    }
+    @include mobile {
+      font-size: 1.7rem;
+    }
+    text-align: center;
+    text-transform: uppercase;
+    opacity: 0;
+    font-size: 3rem;
+    color: #05668D;
+    font-family: "Ubuntu", sans-serif;
+    animation: headline 1s ease-in-out 1 1s normal forwards;
+    @keyframes headline {
+      from {
+        transform: translateY(40px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+  }
+}

@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap");
+#offer {
+  background-color: #cddef1;
+  display: flex;
+  width: 80vw;
+  margin: 0 auto;
+}
+
+@media (max-width: 1000px) {
+  #offer {
+    flex-direction: column;
+    width: 100vw;
+  }
+}
+
+#offer .offer_image {
+  flex: 1;
+  text-align: center;
+}
+
+#offer .offer_image .coding {
+  margin: 60px 0;
+  width: 50%;
+}
+
+@media (max-width: 600px) {
+  #offer .offer_image .coding {
+    width: 70%;
+    margin-bottom: 20px;
+  }
+}
+
+#offer .offer_description {
+  flex: 1;
+  font-family: "Ubuntu", sans-serif;
+  background-color: #ebf2fa;
+}
+
+#offer .offer_description .headline {
+  text-align: center;
+  margin: 40px 0;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  color: #05668D;
+}
+
+#offer .offer_description .description {
+  margin: 40px;
+  font-size: 1.3rem;
+  line-height: 2rem;
+}
+
+@media (max-width: 600px) {
+  #offer .offer_description .description {
+    font-size: 1.1rem;
+    line-height: 1.7rem;
+  }
+}
+/*# sourceMappingURL=Offer.css.map */

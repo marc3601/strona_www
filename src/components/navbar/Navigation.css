@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  min-width: 100vw;
+  z-index: 6;
+  background-color: #427AA1;
+  box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.75);
+}
+
+@media (max-width: 1000px) {
+  .navigation {
+    position: relative;
+  }
+}
+
+.navigation .navigation_logo .logo {
+  font-family: "Permanent Marker", cursive;
+  margin: 15px;
+  font-size: 1.3rem;
+  min-width: 150px;
+  color: white;
+  user-select: none;
+  cursor: pointer;
+}
+
+@media (max-width: 1000px) {
+  .navigation .navigation_buttons {
+    background-color: #05668d;
+    display: block;
+    position: absolute;
+    z-index: 5;
+    width: 100vw;
+    top: 60px;
+  }
+}
+
+.navigation .navigation_buttons ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  height: 100%;
+  margin: 0;
+  padding-inline-start: 0;
+}
+
+@media (max-width: 1000px) {
+  .navigation .navigation_buttons ul {
+    position: relative;
+    z-index: 5;
+    flex-direction: column;
+  }
+}
+
+.navigation .navigation_buttons ul li {
+  width: 10vw;
+  text-align: center;
+  cursor: pointer;
+  font-family: "Roboto", sans-serif;
+}
+
+@media (max-width: 1000px) {
+  .navigation .navigation_buttons ul li {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 100vw;
+  }
+}
+
+.navigation .navigation_buttons ul li a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 100vw;
+}
+
+.navigation .navigation_burger {
+  display: none;
+}
+
+@media (max-width: 1000px) {
+  .navigation .navigation_burger {
+    display: flex;
+    fill: white;
+    align-items: center;
+    width: 70px;
+  }
+  .navigation .navigation_burger svg {
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 600px) {
+  .navigation .navigation_burger {
+    width: 60px;
+  }
+}
+/*# sourceMappingURL=Navigation.css.map */

@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap");
+.main {
+  min-height: 90vh;
+  border-bottom: 1px solid black;
+}
+
+.main .main_images {
+  display: flex;
+  min-height: 60vh;
+}
+
+@media (max-width: 1000px) {
+  .main .main_images {
+    flex-direction: column;
+    min-height: 80vh;
+  }
+}
+
+@media (max-width: 600px) {
+  .main .main_images {
+    min-height: 60vh;
+  }
+}
+
+.main .main_images .main_right {
+  flex: 1;
+  text-align: center;
+}
+
+.main .main_images .main_right .laptop {
+  position: relative;
+  opacity: 0;
+  left: 0;
+  top: 50px;
+  width: 75%;
+  animation: laptop 1s ease-in-out 1 0.5s normal forwards;
+}
+
+@media (max-width: 1000px) {
+  .main .main_images .main_right .laptop {
+    width: 45%;
+    top: 0;
+  }
+}
+
+@keyframes laptop {
+  from {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(20px);
+    opacity: 1;
+  }
+}
+
+.main .main_left {
+  flex: 1;
+  position: relative;
+  text-align: center;
+}
+
+.main .main_left .phone {
+  position: relative;
+  opacity: 0;
+  left: 0;
+  top: 0;
+  width: 71%;
+  animation: phone 1s ease-in-out 1 normal forwards;
+}
+
+@media (max-width: 1000px) {
+  .main .main_left .phone {
+    width: 50%;
+  }
+}
+
+@keyframes phone {
+  from {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(20px);
+    opacity: 1;
+  }
+}
+
+.main .main_title {
+  text-align: center;
+  text-transform: uppercase;
+  opacity: 0;
+  font-size: 3rem;
+  color: #05668D;
+  font-family: "Ubuntu", sans-serif;
+  animation: headline 1s ease-in-out 1 1s normal forwards;
+}
+
+@media (max-width: 1000px) {
+  .main .main_title {
+    font-size: 2rem;
+    margin: 36px 0 70px;
+  }
+}
+
+@media (max-width: 600px) {
+  .main .main_title {
+    font-size: 1.7rem;
+  }
+}
+
+@keyframes headline {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+/*# sourceMappingURL=Header.css.map */
