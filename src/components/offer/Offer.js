@@ -1,17 +1,42 @@
 import React from "react";
 import "./Offer.css";
 
-const Offer = () => {
-  return (
-    <div id="offer">
-      <div className="offer_image">
-        <img className="coding" src="/programowanie.jpg" alt="" />
-      </div>
-      <div className="offer_description">
-        <h2 className="headline">Strony www</h2>
-        <p className="description">Oferuję projekt oraz wykonanie stron internetowych. Możliwość zamówienia prostych wizytówek oraz bardziej rozbudowanych stron z podstronami, formularzem, galerią itp.</p>
-      </div>
+const Offer = ({ image, side, width, head, desc }) => {
+  const picture = (
+    <div className="offer_image">
+      <img
+        className="coding"
+        src={image}
+        alt={`${image.substring(1, image.length - 4)}`}
+      />
     </div>
+  );
+  const description = (
+    <div className="offer_description">
+      <h2 className="headline">{head}</h2>
+      <p className="description">
+        {desc}
+      </p>
+    </div>
+  );
+  const renderRight = [picture, description];
+  const renderLeft = [description, picture];
+
+  const desktopOffer = (
+    <div id="offer">
+      {side === "right" && renderRight.map((item) => <>{item}</>)}
+      {side === "left" && renderLeft.map((item) => <>{item}</>)}
+    </div>
+  )
+  const mobileOffer = (
+    <div id="offer">
+      {renderRight.map((item) => <>{item}</>)}
+    </div>
+  )
+
+  return (
+    <>{width > 1000 && desktopOffer}
+    {width < 1000 && mobileOffer}</>
   );
 };
 
