@@ -5,7 +5,6 @@
   justify-content: space-between;
   min-width: 100vw;
   z-index: 6;
-  background-color: #427AA1;
   box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.75);
 }
 
@@ -20,14 +19,14 @@
   margin: 15px;
   font-size: 1.3rem;
   min-width: 150px;
-  color: white;
+  color: black;
   user-select: none;
   cursor: pointer;
 }
 
 @media (max-width: 1000px) {
   .navigation .navigation_buttons {
-    background-color: #05668d;
+    background-color: white;
     display: block;
     position: absolute;
     z-index: 5;
@@ -71,7 +70,7 @@
 }
 
 .navigation .navigation_buttons ul li a {
-  color: white;
+  color: black;
   text-decoration: none;
   text-transform: uppercase;
   width: 100vw;
@@ -84,7 +83,7 @@
 @media (max-width: 1000px) {
   .navigation .navigation_burger {
     display: flex;
-    fill: white;
+    fill: black;
     align-items: center;
     width: 70px;
   }

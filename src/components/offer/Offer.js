@@ -13,10 +13,10 @@ const Offer = ({ image, side, width, head, desc }) => {
   );
   const description = (
     <div className="offer_description">
-      <h2 className="headline">{head}</h2>
-      <p className="description">
-        {desc}
-      </p>
+      <div className="description_container">
+        <h2 className="headline">{head}</h2>
+        <p className="description">{desc}</p>
+      </div>
     </div>
   );
   const renderRight = [picture, description];
@@ -27,16 +27,20 @@ const Offer = ({ image, side, width, head, desc }) => {
       {side === "right" && renderRight.map((item) => <>{item}</>)}
       {side === "left" && renderLeft.map((item) => <>{item}</>)}
     </div>
-  )
+  );
   const mobileOffer = (
     <div id="offer">
-      {renderRight.map((item) => <>{item}</>)}
+      {renderRight.map((item) => (
+        <>{item}</>
+      ))}
     </div>
-  )
+  );
 
   return (
-    <>{width > 1000 && desktopOffer}
-    {width < 1000 && mobileOffer}</>
+    <>
+      {width > 1000 && desktopOffer}
+      {width < 1000 && mobileOffer}
+    </>
   );
 };
 

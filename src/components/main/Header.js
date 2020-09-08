@@ -13,6 +13,7 @@ const Header = () => {
         </div>
       </div>
       <h1 className="main_title">Strony i aplikacje internetowe</h1>
+      <div className="mainBackground"></div>
     </div>
   );
 };

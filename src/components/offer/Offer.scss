@@ -10,10 +10,9 @@
   }
 }
 #offer {
-  background-color: #cddef1;
   display: flex;
-  width: 80vw;
-  margin: 0 auto;
+  width: 60vw;
+  margin: 30px auto 10px;
   @include tablet {
     flex-direction: column;
     width: 100vw;
@@ -22,7 +21,6 @@
     flex: 1;
     text-align: center;
     .coding {
-      margin: 60px 0;
       width: 50%;
       @include mobile {
         width: 70%;
@@ -33,21 +31,37 @@
   .offer_description {
     flex: 1;
     font-family: "Ubuntu", sans-serif;
-    background-color: #ebf2fa;
-    .headline {
-      text-align: center;
-      margin: 40px 0;
-      font-size: 1.5rem;
-      text-transform: uppercase;
-      color: #05668D;
-    }
-    .description {
-      margin: 40px;
-      font-size: 1.3rem;
-      line-height: 2rem;
+
+    .description_container {
+      position: relative;
+      background: linear-gradient(225deg, #ff8f00 0, #ffdc00 75%);
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.15);
+      color: #180ca4;
+      transition: transform .3s cubic-bezier(.25,.1,.25,1),box-shadow .3s cubic-bezier(.25,.1,.25,1);
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 25px 60px 0 rgba(0, 0, 0, 0.1);
+      }
+      
       @include mobile {
-        font-size: 1.1rem;
-        line-height: 1.7rem;
+        padding: 10px;
+      }
+      .headline {
+        text-align: center;
+        margin: 40px 0;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+      }
+      .description {
+        margin: 40px;
+        font-size: 1.3rem;
+        line-height: 2rem;
+        @include mobile {
+          font-size: 1.1rem;
+          line-height: 1.7rem;
+        }
       }
     }
   }
