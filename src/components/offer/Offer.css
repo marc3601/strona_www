@@ -5,6 +5,12 @@
   margin: 30px auto 10px;
 }
 
+@media (max-width: 1300px) {
+  #offer {
+    width: 80vw;
+  }
+}
+
 @media (max-width: 1000px) {
   #offer {
     flex-direction: column;
@@ -23,7 +29,6 @@
 
 @media (max-width: 600px) {
   #offer .offer_image .coding {
-    width: 70%;
     margin-bottom: 20px;
   }
 }
@@ -31,6 +36,13 @@
 #offer .offer_description {
   flex: 1;
   font-family: "Ubuntu", sans-serif;
+}
+
+@media (max-width: 1000px) {
+  #offer .offer_description {
+    width: 90vw;
+    margin: 0 auto;
+  }
 }
 
 #offer .offer_description .description_container {

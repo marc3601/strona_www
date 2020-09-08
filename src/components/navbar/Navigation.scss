@@ -11,13 +11,12 @@
   }
 }
 .navigation {
-  @include tablet {
-    position: relative;
-  }
+  position: fixed;
   display: flex;
   justify-content: space-between;
   min-width: 100vw;
   z-index: 6;
+  background-color: white;
   box-shadow: 0px 4px 14px 0px rgba(0,0,0,0.75);
   .navigation_logo {
     .logo {
@@ -25,7 +24,7 @@
       margin: 15px;
       font-size: 1.3rem;
       min-width: 150px;
-      color: black;
+      color: #005af0;
       user-select: none;
       cursor: pointer;
     }
@@ -38,6 +37,7 @@
       z-index: 5;
       width: 100vw;
       top: 60px;
+      border-bottom: 1px solid black;
     }
     ul {
       @include tablet {

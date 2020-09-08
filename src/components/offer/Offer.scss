@@ -1,4 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap");
+@mixin middle_screen {
+  @media (max-width: 1300px) {
+    @content;
+  }
+}
+
 @mixin tablet {
   @media (max-width: 1000px) {
     @content;
@@ -13,6 +19,9 @@
   display: flex;
   width: 60vw;
   margin: 30px auto 10px;
+  @include middle_screen {
+    width: 80vw;
+  }
   @include tablet {
     flex-direction: column;
     width: 100vw;
@@ -23,7 +32,6 @@
     .coding {
       width: 50%;
       @include mobile {
-        width: 70%;
         margin-bottom: 20px;
       }
     }
@@ -31,7 +39,10 @@
   .offer_description {
     flex: 1;
     font-family: "Ubuntu", sans-serif;
-
+    @include tablet {
+      width: 90vw;
+      margin: 0 auto;
+    }
     .description_container {
       position: relative;
       background: linear-gradient(225deg, #ff8f00 0, #ffdc00 75%);
@@ -44,7 +55,6 @@
         transform: translateY(-2px);
         box-shadow: 0 25px 60px 0 rgba(0, 0, 0, 0.1);
       }
-      
       @include mobile {
         padding: 10px;
       }

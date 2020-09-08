@@ -4,6 +4,7 @@
 .main {
   min-height: 90vh;
   position: relative;
+  margin-top: 60px;
 }
 
 .main .main_images {
