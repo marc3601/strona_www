@@ -4,7 +4,7 @@
 .main {
   min-height: 90vh;
   position: relative;
-  margin-top: 60px;
+  padding-top: 60px;
 }
 
 .main .main_images {
@@ -91,6 +91,7 @@
 }
 
 .main .main_title {
+  margin-top: 40px;
   text-align: center;
   opacity: 0;
   font-size: 3rem;
@@ -103,13 +104,6 @@
 @media (max-width: 1000px) {
   .main .main_title {
     font-size: 2rem;
-    margin: 36px 0 70px;
-  }
-}
-
-@media (max-width: 600px) {
-  .main .main_title {
-    font-size: 1.7rem;
   }
 }
 
@@ -133,5 +127,11 @@
   clip-path: circle(50% at 50% 50%);
   left: 0;
   top: 0;
+}
+
+@media (max-width: 1000px) {
+  .main .mainBackground {
+    clip-path: none;
+  }
 }
 /*# sourceMappingURL=Header.css.map */

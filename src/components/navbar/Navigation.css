@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 .navigation {
   position: fixed;
+  top: 0;
   display: flex;
   justify-content: space-between;
   min-width: 100vw;
@@ -43,7 +44,6 @@
 
 @media (max-width: 1000px) {
   .navigation .navigation_buttons ul {
-    position: relative;
     z-index: 5;
     flex-direction: column;
   }

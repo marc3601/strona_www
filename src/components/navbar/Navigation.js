@@ -1,55 +1,56 @@
 import React, { useState, useEffect } from "react";
 import "./Navigation.css";
 
-const Navigation = () => {
+const Navigation = ({ width, scrollDirection }) => {
   const [isActive, setActive] = useState(false);
-  const [viewWidth, setWidth] = useState(1000);
-  const [viewHeight, setHeight] = useState(0);
-
+  const [preventTransit, setPrevent] = useState({transition: ".5s ease"})
 
   const handleBurger = () => {
     setActive(!isActive);
   };
   const defaultLink = (e) => {
-    e.preventDefault()
-  }
+    e.preventDefault();
+  };
+
+  const cond = scrollDirection === "down";
+  const navHide = cond ? { transform: "translateY(-70px)" } : null;
 
   useEffect(() => {
     window.addEventListener("resize", () => {
-      setWidth(window.innerWidth);
+      setPrevent({transition: "none"});
+      setTimeout(()=>{
+        setPrevent({transition: ".5s ease"});
+      },10)
     });
-   
-    window.addEventListener("load", () => {
-      setWidth(window.innerWidth);
-    });
-    document.addEventListener("scroll", ()=> {
-      setHeight(parseInt((window.pageYOffset).toFixed(0)))
-    })
-
-    return undefined
   }, []);
 
   const navButtons = (
     <div className="navigation_buttons">
       <ul>
         <li>
-          <a onClick={handleBurger} href="#offer">Strony internetowe</a>
+          <a onClick={handleBurger} href="#offer">
+            Strony internetowe
+          </a>
         </li>
         <li>
-          <a onClick={defaultLink} href="/">Oferta</a>
+          <a onClick={defaultLink} href="/">
+            Oferta
+          </a>
         </li>
         <li>
-          <a onClick={defaultLink} href="/">Kontakt</a>
+          <a onClick={defaultLink} href="/">
+            Kontakt
+          </a>
         </li>
       </ul>
     </div>
   );
   return (
-    <div className="navigation">
+    <div className="navigation" style={{...navHide, ...preventTransit}}>
       <div className="navigation_logo">
         <p className="logo">{`< WEB DEV />`}</p>
       </div>
-        {isActive && navButtons || viewWidth > 1000 && navButtons}
+      {(isActive && navButtons) || (width > 1000 && navButtons)}
       <div onClick={handleBurger} className="navigation_burger">
         <svg viewBox="0 0 100 80" width="40" height="40">
           <rect width="100" height="15"></rect>

@@ -5,7 +5,9 @@ import Header from "./components/main/Header";
 import Offer from "./components/offer/Offer";
 function App() {
   const [width, setWidth] = useState(null);
-  const [scroll, setScroll] = useState(0);
+  // const [scroll, setScroll] = useState(0);
+  const [scrollDirection, setDirection] = useState("");
+
   const headlineWWW = "Strony www";
   const wwwDesc =
     "Oferuję projekt oraz wykonanie stron internetowych. Możliwość zamówienia prostych wizytówek jaki i bardziej rozbudowanych stron wraz z formularzem, galerią itp. Strony charakteryzują się dużą prostotą oraz szybkością działania.";
@@ -15,22 +17,37 @@ function App() {
   const photoHead = "Fotografia produktowa";
   const photoDesc =
     "Usługa wykonywana jako dodatek do strony. Możliwość wykonania zdjęć profesjonalnym sprzętem fotograficznym wraz z ich późniejszą obróbką. Pozwoli to uzyskać doskonałą jakość zdjęć co pozytywnie wpłynie na wygląd witryny.";
+
   useEffect(() => {
     window.addEventListener("load", () => {
-      setWidth(window.innerWidth);
+      setWidth(parseInt(window.innerWidth.toFixed(0)));
     });
     window.addEventListener("resize", () => {
-      setWidth(window.innerWidth);
+      setWidth(parseInt(window.innerWidth.toFixed(0)));
     });
-    window.addEventListener("scroll", () => {
-      setScroll(window.scrollY);
-    });
+    // window.addEventListener("scroll", () => {
+    //   setScroll(parseInt(window.pageYOffset.toFixed(0)));
+    // });
+    window.onscroll = (e) => {
+      if (window.oldScroll > window.scrollY) {
+        setDirection("up");
+        window.oldScroll = window.scrollY;
+      } else {
+        setDirection("down");
+        window.oldScroll = window.scrollY;
+      }
+    };
   }, []);
+
   return (
     <div className="container">
-      <Navigation />
+      <Navigation
+        width={width}
+        scrollDirection={scrollDirection}
+      />
       <Header />
       <Offer
+        key={1}
         image={"/globe.png"}
         side="left"
         width={width}
@@ -38,6 +55,7 @@ function App() {
         desc={wwwDesc}
       />
       <Offer
+        key={2}
         image={"/gears_motor.gif"}
         side="right"
         width={width}
@@ -45,6 +63,7 @@ function App() {
         desc={apsDesc}
       />
       <Offer
+        key={3}
         image={"/dslr.png"}
         side="left"
         width={width}

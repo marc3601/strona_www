@@ -12,12 +12,14 @@
 }
 .navigation {
   position: fixed;
+  top: 0;
   display: flex;
   justify-content: space-between;
   min-width: 100vw;
   z-index: 6;
   background-color: white;
   box-shadow: 0px 4px 14px 0px rgba(0,0,0,0.75);
+  // transition: .5s ease;
   .navigation_logo {
     .logo {
       font-family: "Permanent Marker", cursive;
@@ -41,7 +43,6 @@
     }
     ul {
       @include tablet {
-        position: relative;
         z-index: 5;
         flex-direction: column;
       }

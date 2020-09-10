@@ -14,7 +14,8 @@
 .main {
   min-height: 90vh;
   position: relative;
-  margin-top: 60px;
+  padding-top: 60px;
+
   .main_images {
     display: flex;
     min-height: 60vh;
@@ -80,13 +81,12 @@
     }
   }
   .main_title {
+    margin-top: 40px;
     @include tablet {
       font-size: 2rem;
-      margin: 36px 0 70px;
+     
     }
-    @include mobile {
-      font-size: 1.7rem;
-    }
+   
     text-align: center;
     opacity: 0;
     font-size: 3rem;
@@ -114,5 +114,8 @@
     clip-path: circle(50.0% at 50% 50%);
     left: 0;
     top: 0;
+    @include tablet {
+      clip-path: none;
+    }
   }
 }
