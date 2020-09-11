@@ -48,7 +48,7 @@ function App() {
       <Header />
       <Offer
         key={1}
-        image={"/globe.png"}
+        image={"/websites.svg"}
         side="left"
         width={width}
         head={headlineWWW}
@@ -56,7 +56,7 @@ function App() {
       />
       <Offer
         key={2}
-        image={"/gears_motor.gif"}
+        image={"/application.svg"}
         side="right"
         width={width}
         head={webApps}
@@ -64,7 +64,7 @@ function App() {
       />
       <Offer
         key={3}
-        image={"/dslr.png"}
+        image={"/camera.svg"}
         side="left"
         width={width}
         head={photoHead}

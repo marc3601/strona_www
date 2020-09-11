@@ -24,13 +24,16 @@
 }
 
 #offer .offer_image .coding {
-  width: 50%;
+  width: 70%;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 @media (max-width: 1000px) {
   #offer .offer_image .coding {
-    width: 30%;
-    margin-bottom: 20px;
+    width: 40%;
+    transform: none;
   }
 }
 

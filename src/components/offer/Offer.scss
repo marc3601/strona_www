@@ -30,10 +30,13 @@
     flex: 1;
     text-align: center;
     .coding {
-      width: 50%;
+      width: 70%;
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
       @include tablet {
-        width: 30%;
-        margin-bottom: 20px;
+        width: 40%;
+        transform: none;
       }
     }
   }
@@ -51,7 +54,8 @@
       border-radius: 10px;
       box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.15);
       color: #180ca4;
-      transition: transform .3s cubic-bezier(.25,.1,.25,1),box-shadow .3s cubic-bezier(.25,.1,.25,1);
+      transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1),
+        box-shadow 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
       &:hover {
         transform: translateY(-2px);
         box-shadow: 0 25px 60px 0 rgba(0, 0, 0, 0.1);
