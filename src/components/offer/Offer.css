@@ -21,6 +21,7 @@
 #offer .offer_image {
   flex: 1;
   text-align: center;
+  margin: 20px 0;
 }
 
 #offer .offer_image .coding {
@@ -34,6 +35,12 @@
   #offer .offer_image .coding {
     width: 40%;
     transform: none;
+  }
+}
+
+@media (max-width: 600px) {
+  #offer .offer_image .coding {
+    width: 60%;
   }
 }
 
@@ -66,7 +73,7 @@
 
 @media (max-width: 600px) {
   #offer .offer_description .description_container {
-    padding: 10px;
+    padding: 1px 8px;
   }
 }
 
@@ -80,7 +87,7 @@
 #offer .offer_description .description_container .description {
   margin: 40px;
   font-size: 1.3rem;
-  line-height: 2rem;
+  line-height: 1.7rem;
 }
 
 @media (max-width: 600px) {

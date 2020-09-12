@@ -9,7 +9,7 @@
 
 .main .main_images {
   display: flex;
-  min-height: 60vh;
+  min-height: 50vh;
 }
 
 @media (max-width: 1000px) {

@@ -1,0 +1,34 @@
+:root {
+  --size: calc(100vw / 3);
+}
+.slider {
+  margin: 20px 0;
+  position: relative;
+  .slider_images {
+    display: flex;
+    transition: 0.5s ease-out;
+    .slider_picture {
+      // object-fit: contain;
+      width: calc(var(--size));
+    }
+  }
+  .slider_left,
+  .slider_right {
+    position: absolute;
+    top: 50%;
+    width: 40px;
+    transition: 0.2s ease;
+    cursor: pointer;
+    &:hover {
+      width: 50px;
+    }
+  }
+  .slider_left {
+    transform: translateY(-50%) rotateY(180deg);
+    left: 10px;
+  }
+  .slider_right {
+    right: 10px;
+    transform: translateY(-50%);
+  }
+}

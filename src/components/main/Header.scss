@@ -18,7 +18,7 @@
 
   .main_images {
     display: flex;
-    min-height: 60vh;
+    min-height: 50vh;
     @include tablet {
       flex-direction: column;
       min-height: 80vh;
