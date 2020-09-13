@@ -30,25 +30,17 @@ function App() {
       alt: "phone",
     },
     {
-      image: "/landscape.jpg",
-      alt: "dslr",
-    },
-    {
-      image: "/space.jpg",
-      alt: "laptop",
-    },
-    {
-      image: "/yellowstone.jpg",
+      image: "/lambo.jpg",
       alt: "phone",
     },
     {
-      image: "/space.jpg",
-      alt: "laptop",
+      image: "/island.jpg",
+      alt: "island",
     },
     {
-      image: "/yellowstone.jpg",
-      alt: "phone",
-    }
+      image: "/shuttle.jpg",
+      alt: "shuttle",
+    },
   ];
   useEffect(() => {
     window.addEventListener("load", () => {
@@ -69,6 +61,7 @@ function App() {
         window.oldScroll = window.scrollY;
       }
     };
+    console.log("%cThis is an early development version. Bugs will appear.😄", "background: red; color: yellow; font-size: x-large");
   }, []);
 
   return (
@@ -99,7 +92,7 @@ function App() {
         head={photoHead}
         desc={photoDesc}
       />
-      <Slider images = {images} />
+      <Slider images={images} screenWidth={width} />
     </div>
   );
 }

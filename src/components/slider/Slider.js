@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import ArrowIcon from "./ArrowIcon";
 import "./Slider.css";
 
-export default function Slider({ images }) {
+export default function Slider({ images, screenWidth }) {
   const [transform, setTransform] = useState(0);
   const [preventTransit, setPrevent] = useState({ transition: ".5s ease-out" });
   const [imagesOnTheRight, setImagesOnTheRight] = useState(images.length - 3);
@@ -46,7 +46,7 @@ export default function Slider({ images }) {
   }, []);
 
   return (
-    <div className="slider">
+    <div id="slider">
       <div
         className="slider_images"
         style={{ ...transformation, ...preventTransit }}

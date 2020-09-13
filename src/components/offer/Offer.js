@@ -24,14 +24,14 @@ const Offer = ({ image, side, width, head, desc }) => {
 
   const desktopOffer = (
     <div id="offer">
-      {side === "right" && renderRight.map((item) => <>{item}</>)}
-      {side === "left" && renderLeft.map((item) => <>{item}</>)}
+      {side === "right" && renderRight.map((item,id) => <React.Fragment key={id}>{item}</React.Fragment>)}
+      {side === "left" && renderLeft.map((item,id) => <React.Fragment key={id}>{item}</React.Fragment>)}
     </div>
   );
   const mobileOffer = (
     <div id="offer">
-      {renderRight.map((item) => (
-        <>{item}</>
+      {renderRight.map((item,id) => (
+        <React.Fragment key={id}>{item}</React.Fragment>
       ))}
     </div>
   );

@@ -33,7 +33,7 @@ const Navigation = ({ width, scrollDirection }) => {
           </a>
         </li>
         <li>
-          <a onClick={defaultLink} href="/">
+          <a onClick={handleBurger} href="#slider">
             Oferta
           </a>
         </li>
