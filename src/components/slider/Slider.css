@@ -3,13 +3,13 @@
 }
 
 .slider {
+  user-select: none;
   margin: 20px 0;
   position: relative;
 }
 
 .slider .slider_images {
   display: flex;
-  transition: 0.5s ease-out;
 }
 
 .slider .slider_images .slider_picture {

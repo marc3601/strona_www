@@ -2,11 +2,12 @@
   --size: calc(100vw / 3);
 }
 .slider {
+  user-select: none;
   margin: 20px 0;
   position: relative;
   .slider_images {
     display: flex;
-    transition: 0.5s ease-out;
+    // transition: 0.5s ease-out;
     .slider_picture {
       // object-fit: contain;
       width: calc(var(--size));

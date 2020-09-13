@@ -40,6 +40,14 @@ function App() {
     {
       image: "/yellowstone.jpg",
       alt: "phone",
+    },
+    {
+      image: "/space.jpg",
+      alt: "laptop",
+    },
+    {
+      image: "/yellowstone.jpg",
+      alt: "phone",
     }
   ];
   useEffect(() => {
