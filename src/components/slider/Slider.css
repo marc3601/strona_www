@@ -1,7 +1,3 @@
-:root {
-  --size: calc(100vw / 3);
-}
-
 #slider {
   user-select: none;
   margin: 20px 0;
@@ -13,7 +9,13 @@
 }
 
 #slider .slider_images .slider_picture {
-  width: calc(var(--size));
+  width: calc(100vw / 3);
+}
+
+@media (max-width: 1300px) {
+  #slider .slider_images .slider_picture {
+    width: calc(100vw / 2);
+  }
 }
 
 #slider .slider_left,

@@ -1,5 +1,18 @@
-:root {
-  --size: calc(100vw / 3);
+@mixin middle_screen {
+  @media (max-width: 1300px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: 1000px) {
+    @content;
+  }
+}
+@mixin mobile {
+  @media (max-width: 600px) {
+    @content;
+  }
 }
 #slider {
   user-select: none;
@@ -7,10 +20,11 @@
   position: relative;
   .slider_images {
     display: flex;
-    // transition: 0.5s ease-out;
     .slider_picture {
-      // object-fit: contain;
-      width: calc(var(--size));
+      width: calc(100vw / 3);
+      @include middle_screen {
+        width: calc(100vw / 2);
+      }
     }
   }
   .slider_left,

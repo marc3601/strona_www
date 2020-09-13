@@ -2,10 +2,10 @@ import React, { useState, useEffect } from "react";
 import ArrowIcon from "./ArrowIcon";
 import "./Slider.css";
 
-export default function Slider({ images, screenWidth }) {
+export default function Slider({ images, imgVisible }) {
   const [transform, setTransform] = useState(0);
   const [preventTransit, setPrevent] = useState({ transition: ".5s ease-out" });
-  const [imagesOnTheRight, setImagesOnTheRight] = useState(images.length - 3);
+  const [imagesOnTheRight, setImagesOnTheRight] = useState(images.length - imgVisible);
   const [imagesOnTheLeft, setImagesOnTheLeft] = useState(0);
   const [canClickRight, setCanClickRight] = useState(true);
   const [canClickLeft, setCanClickLeft] = useState(false);
@@ -14,7 +14,7 @@ export default function Slider({ images, screenWidth }) {
   };
 
   const handleRight = () => {
-    setTransform(transform - 100 / 3);
+    setTransform(transform - 100 / imgVisible);
     if (imagesOnTheRight <= 1) {
       setCanClickRight(false);
     }
@@ -25,7 +25,7 @@ export default function Slider({ images, screenWidth }) {
     setImagesOnTheLeft(imagesOnTheLeft + 1);
   };
   const handleLeft = () => {
-    setTransform(transform + 100 / 3);
+    setTransform(transform + 100 / imgVisible);
     if (imagesOnTheRight >= 0) {
       setCanClickRight(true);
     }
@@ -44,6 +44,14 @@ export default function Slider({ images, screenWidth }) {
       }, 10);
     });
   }, []);
+
+  useEffect(()=>{
+    setImagesOnTheRight(images.length - imgVisible);
+    setImagesOnTheLeft(0);
+    setCanClickRight(true);
+    setCanClickLeft(false);
+    setTransform(0);
+  }, [imgVisible, images.length])
 
   return (
     <div id="slider">

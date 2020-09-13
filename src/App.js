@@ -61,7 +61,10 @@ function App() {
         window.oldScroll = window.scrollY;
       }
     };
-    console.log("%cThis is an early development version. Bugs will appear.😄", "background: red; color: yellow; font-size: x-large");
+    console.log(
+      "%cThis is an early development version. Bugs will appear.😄",
+      "background: red; color: yellow; font-size: x-large"
+    );
   }, []);
 
   return (
@@ -92,7 +95,8 @@ function App() {
         head={photoHead}
         desc={photoDesc}
       />
-      <Slider images={images} screenWidth={width} />
+      <Slider images={images} imgVisible={width > 1300 ? 3 : 2} />
+     
     </div>
   );
 }
