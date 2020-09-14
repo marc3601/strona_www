@@ -2,7 +2,7 @@
   text-align: center;
   margin: 70px 0 30px;
   padding: 20px 0;
-  box-shadow: inset 0px 0px 18px -8px black;
+  box-shadow: inset 0px 0px 3px 0px rgba(0, 0, 0, 0.75);
   color: #180ca4;
 }
 
