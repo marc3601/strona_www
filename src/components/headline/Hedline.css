@@ -1,0 +1,55 @@
+.headliner {
+  text-align: center;
+  margin: 70px 0 30px;
+  padding: 20px 0;
+  box-shadow: inset 0px 0px 18px -8px black;
+  color: #180ca4;
+}
+
+.headliner .headline_title {
+  font-family: "Poppins", sans-serif;
+  font-size: 2.8rem;
+}
+
+@media (max-width: 1000px) {
+  .headliner .headline_title {
+    font-size: 2.4rem;
+    margin: 0 auto;
+    width: 80vw;
+  }
+}
+
+@media (max-width: 600px) {
+  .headliner .headline_title {
+    font-size: 2.1rem;
+    width: 95vw;
+  }
+}
+
+.headliner .headline_description {
+  text-align: left;
+  width: 60vw;
+  font-family: "Ubuntu", sans-serif;
+  margin: 50px auto;
+  font-size: 1.3rem;
+  line-height: 2rem;
+}
+
+.headliner .headline_description .headline_important {
+  font-weight: bold;
+}
+
+@media (max-width: 1000px) {
+  .headliner .headline_description {
+    margin: 30px auto;
+    width: 90vw;
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .headliner .headline_description {
+    font-size: 1.1rem;
+  }
+}
+/*# sourceMappingURL=Hedline.css.map */

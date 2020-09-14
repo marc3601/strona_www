@@ -1,0 +1,51 @@
+@mixin tablet {
+  @media (max-width: 1000px) {
+    @content;
+  }
+}
+@mixin mobile {
+    @media (max-width: 600px) {
+      @content;
+    }
+  }
+
+.headliner {
+  text-align: center;
+  margin: 70px 0 30px;
+  padding: 20px 0;
+  box-shadow: inset 0px 0px 18px -8px rgba(0, 0, 0, 1);
+  color: #180ca4;
+
+  .headline_title {
+    font-family: "Poppins", sans-serif;
+    font-size: 2.8rem;
+    @include tablet {
+      font-size: 2.4rem;
+      margin: 0 auto;
+      width: 80vw;
+    }
+    @include mobile {
+        font-size: 2.1rem;
+        width: 95vw;
+    }
+  }
+  .headline_description {
+    text-align: left;
+    width: 60vw;
+    font-family: "Ubuntu", sans-serif;
+    margin: 50px auto;
+    font-size: 1.3rem;
+    line-height: 2rem;
+    .headline_important {
+      font-weight: bold;
+    }
+    @include tablet {
+      margin: 30px auto;
+      width: 90vw;
+      font-size: 1.2rem;
+    }
+    @include mobile {
+        font-size: 1.1rem;
+    }
+  }
+}
