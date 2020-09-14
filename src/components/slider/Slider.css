@@ -18,6 +18,12 @@
   }
 }
 
+@media (max-width: 600px) {
+  #slider .slider_images .slider_picture {
+    width: calc(100vw / 1);
+  }
+}
+
 #slider .slider_left,
 #slider .slider_right {
   position: absolute;

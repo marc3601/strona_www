@@ -95,8 +95,11 @@ function App() {
         head={photoHead}
         desc={photoDesc}
       />
-      <Slider images={images} imgVisible={width > 1300 ? 3 : 2} />
-     
+      {width < 600 ? (
+        <Slider images={images} imgVisible={1} />
+      ) : (
+        <Slider images={images} imgVisible={width > 1300 ? 3 : 2} />
+      )}
     </div>
   );
 }

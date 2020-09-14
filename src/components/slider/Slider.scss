@@ -3,12 +3,6 @@
     @content;
   }
 }
-
-@mixin tablet {
-  @media (max-width: 1000px) {
-    @content;
-  }
-}
 @mixin mobile {
   @media (max-width: 600px) {
     @content;
@@ -24,6 +18,9 @@
       width: calc(100vw / 3);
       @include middle_screen {
         width: calc(100vw / 2);
+      }
+      @include mobile {
+        width: calc(100vw / 1);
       }
     }
   }
