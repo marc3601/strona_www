@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect} from "react";
 import "./App.css";
 import Navigation from "./components/navbar/Navigation";
 import Header from "./components/main/Header";
 import Offer from "./components/offer/Offer";
 import Slider from "./components/slider/Slider";
+import Headline from "./components/headline/Headline";
 function App() {
   const [width, setWidth] = useState(null);
   const [scrollDirection, setDirection] = useState("");
@@ -42,6 +43,7 @@ function App() {
       alt: "shuttle",
     },
   ];
+
   useEffect(() => {
     window.addEventListener("load", () => {
       setWidth(parseInt(window.innerWidth.toFixed(0)));
@@ -95,6 +97,7 @@ function App() {
         head={photoHead}
         desc={photoDesc}
       />
+      <Headline />
       {width < 600 ? (
         <Slider images={images} imgVisible={1} />
       ) : (
