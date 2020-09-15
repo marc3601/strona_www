@@ -43,4 +43,27 @@
     right: 10px;
     transform: translateY(-50%);
   }
+  .dots_container {
+    position: absolute;
+    bottom: 10px;
+    transform: translateX(-50%);
+    left: 50%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    .dot {
+      width: 20px;
+      height: 20px;
+      background-color: black;
+      margin: 0 5px;
+      border-radius: 50%;
+      background-color: #f8b257;
+      transition: .2s ease;
+    }
+    .activeDot {
+      width: 25px;
+      height: 25px;
+      background-color: #fc9b1e;
+    }
+  }
 }

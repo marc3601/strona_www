@@ -47,4 +47,30 @@
   right: 10px;
   transform: translateY(-50%);
 }
+
+#slider .dots_container {
+  position: absolute;
+  bottom: 10px;
+  transform: translateX(-50%);
+  left: 50%;
+  height: 30px;
+  display: flex;
+  align-items: center;
+}
+
+#slider .dots_container .dot {
+  width: 20px;
+  height: 20px;
+  background-color: black;
+  margin: 0 5px;
+  border-radius: 50%;
+  background-color: #f8b257;
+  transition: .2s ease;
+}
+
+#slider .dots_container .activeDot {
+  width: 25px;
+  height: 25px;
+  background-color: #fc9b1e;
+}
 /*# sourceMappingURL=Slider.css.map */

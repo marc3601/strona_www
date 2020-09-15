@@ -99,7 +99,7 @@ function App() {
       />
       <Headline />
       {width < 600 ? (
-        <Slider images={images} imgVisible={1} />
+        <Slider images={images} imgVisible={1} width={width} />
       ) : (
         <Slider images={images} imgVisible={width > 1300 ? 3 : 2} />
       )}

@@ -2,10 +2,12 @@ import React, { useState, useEffect } from "react";
 import ArrowIcon from "./ArrowIcon";
 import "./Slider.css";
 
-export default function Slider({ images, imgVisible }) {
+export default function Slider({ images, imgVisible, width }) {
   const [transform, setTransform] = useState(0);
   const [preventTransit, setPrevent] = useState({ transition: ".5s ease-out" });
-  const [imagesOnTheRight, setImagesOnTheRight] = useState(images.length - imgVisible);
+  const [imagesOnTheRight, setImagesOnTheRight] = useState(
+    images.length - imgVisible
+  );
   const [imagesOnTheLeft, setImagesOnTheLeft] = useState(0);
   const [canClickRight, setCanClickRight] = useState(true);
   const [canClickLeft, setCanClickLeft] = useState(false);
@@ -35,6 +37,13 @@ export default function Slider({ images, imgVisible }) {
     setImagesOnTheRight(imagesOnTheRight + 1);
     setImagesOnTheLeft(imagesOnTheLeft - 1);
   };
+  const makeDots = (dotCount, imagesOnTheLeft) => {
+    const arr = [];
+    for (let i = 0; i < dotCount; i++) {
+      arr.push(<div className={`dot ${imagesOnTheLeft === i ? "activeDot" : ""}`}></div>);
+    }
+    return <div className="dots_container">{arr.map((item,id) => <React.Fragment key={id}>{item}</React.Fragment>)}</div>;
+  };
 
   useEffect(() => {
     window.addEventListener("resize", () => {
@@ -45,13 +54,13 @@ export default function Slider({ images, imgVisible }) {
     });
   }, []);
 
-  useEffect(()=>{
+  useEffect(() => {
     setImagesOnTheRight(images.length - imgVisible);
     setImagesOnTheLeft(0);
     setCanClickRight(true);
     setCanClickLeft(false);
     setTransform(0);
-  }, [imgVisible, images.length])
+  }, [imgVisible, images.length]);
 
   return (
     <div id="slider">
@@ -60,13 +69,14 @@ export default function Slider({ images, imgVisible }) {
         style={{ ...transformation, ...preventTransit }}
       >
         {images.map((image, id) => (
-          <img
-            key={id}
-            className="slider_picture"
-            src={image.image}
-            alt={image.alt}
-          />
+            <img
+              key={id}
+              className="slider_picture"
+              src={image.image}
+              alt={image.alt}
+            />
         ))}
+       
       </div>
       <div
         onClick={canClickLeft ? handleLeft : undefined}
@@ -88,6 +98,7 @@ export default function Slider({ images, imgVisible }) {
           opacity={!canClickRight ? ".7" : "1"}
         />
       </div>
+      {width < 600 && makeDots(images.length, imagesOnTheLeft)}
     </div>
   );
 }
