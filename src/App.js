@@ -5,7 +5,7 @@ import Header from "./components/main/Header";
 import Offer from "./components/offer/Offer";
 import Slider from "./components/slider/Slider";
 import Headline from "./components/headline/Headline";
-function App() {
+export default function App() {
   const [width, setWidth] = useState(null);
   const [scrollDirection, setDirection] = useState("");
   const headlineWWW = "Strony www";
@@ -43,7 +43,6 @@ function App() {
       alt: "shuttle",
     },
   ];
-
   useEffect(() => {
     window.addEventListener("load", () => {
       setWidth(parseInt(window.innerWidth.toFixed(0)));
@@ -51,9 +50,6 @@ function App() {
     window.addEventListener("resize", () => {
       setWidth(parseInt(window.innerWidth.toFixed(0)));
     });
-    // window.addEventListener("scroll", () => {
-    //   setScroll(parseInt(window.pageYOffset.toFixed(0)));
-    // });
     window.onscroll = (e) => {
       if (window.oldScroll > window.scrollY) {
         setDirection("up");
@@ -107,4 +103,3 @@ function App() {
   );
 }
 
-export default App;

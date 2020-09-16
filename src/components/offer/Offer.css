@@ -5,9 +5,15 @@
   margin: 30px auto 10px;
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1450px) {
   #offer {
     width: 80vw;
+  }
+}
+
+@media (max-width: 1300px) {
+  #offer {
+    width: 90vw;
   }
 }
 

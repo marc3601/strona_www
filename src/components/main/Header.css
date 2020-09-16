@@ -2,14 +2,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
 .main {
-  min-height: 90vh;
+  min-height: calc(100vh - 70px);
   position: relative;
-  padding-top: 60px;
+  padding-top: 70px;
 }
 
 .main .main_images {
   display: flex;
-  min-height: 50vh;
+  min-height: 55vh;
 }
 
 @media (max-width: 1000px) {
@@ -21,7 +21,7 @@
 
 @media (max-width: 600px) {
   .main .main_images {
-    min-height: 60vh;
+    min-height: 50vh;
   }
 }
 
@@ -91,12 +91,12 @@
 }
 
 .main .main_title {
-  margin-top: 40px;
+  padding: 0 0 60px;
   text-align: center;
   opacity: 0;
   font-size: 3rem;
   color: white;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 700;
   animation: headline 1s ease-in-out 1 1s normal forwards;
 }
@@ -120,13 +120,13 @@
 
 .main .mainBackground {
   position: absolute;
-  width: 100%;
-  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   z-index: -5;
   background: linear-gradient(225deg, #00dcc0 0, #005af0 75%);
   clip-path: circle(50% at 50% 50%);
-  left: 0;
-  top: 0;
 }
 
 @media (max-width: 1000px) {

@@ -1,4 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap");
+@mixin middle_screen_large {
+  @media (max-width: 1450px) {
+    @content;
+  }
+}
 @mixin middle_screen {
   @media (max-width: 1300px) {
     @content;
@@ -19,8 +24,11 @@
   display: flex;
   width: 60vw;
   margin: 30px auto 10px;
-  @include middle_screen {
+  @include middle_screen_large {
     width: 80vw;
+  }
+  @include middle_screen {
+    width: 90vw;
   }
   @include tablet {
     flex-direction: column;
