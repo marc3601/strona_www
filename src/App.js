@@ -5,6 +5,7 @@ import Header from "./components/main/Header";
 import Offer from "./components/offer/Offer";
 import Slider from "./components/slider/Slider";
 import Headline from "./components/headline/Headline";
+import Contact from "./components/contact/Contact";
 export default function App() {
   const [width, setWidth] = useState(null);
   const [scrollDirection, setDirection] = useState("");
@@ -99,6 +100,7 @@ export default function App() {
       ) : (
         <Slider images={images} imgVisible={width > 1300 ? 3 : 2} />
       )}
+      <Contact/>
     </div>
   );
 }

@@ -1,0 +1,69 @@
+#contact {
+  display: flex;
+  width: 40vw;
+  height: 500px;
+  margin: 40px auto;
+  border-radius: 10px;
+  box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.15);
+  font-family: "Ubuntu", sans-serif;
+}
+
+@media (max-width: 600px) {
+  #contact {
+    width: 95vw;
+  }
+}
+
+@media (max-width: 1000px) {
+  #contact {
+    width: 80vw;
+  }
+}
+
+#contact .contact_sidebar {
+  flex: 2;
+  background-color: yellow;
+}
+
+#contact .contact_sidebar .sidebar_description {
+  margin: 20px;
+}
+
+#contact .contact_main {
+  flex: 4;
+}
+
+#contact .contact_main .contact_form .form_formMessage {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+
+#contact .contact_main .contact_form .form_formMessage h3 {
+  font-family: "Poppins", sans-serif;
+}
+
+#contact .contact_main .contact_form .form_formMessage #message {
+  width: 100%;
+  margin: 0 auto;
+}
+
+#contact .contact_main .contact_form .form_formUser {
+  display: flex;
+  margin: 20px;
+}
+
+#contact .contact_main .contact_form .form_formUser #name,
+#contact .contact_main .contact_form .form_formUser #mail {
+  margin: 0 10px;
+  width: 20%;
+}
+
+#contact .contact_main .contact_form button {
+  position: relative;
+  transform: translateX(-50%);
+  left: 50%;
+  width: 100px;
+  margin: 20px;
+}
+/*# sourceMappingURL=Contact.css.map */
