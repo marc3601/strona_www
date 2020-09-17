@@ -1,36 +1,44 @@
 #contact {
   display: flex;
-  width: 40vw;
+  width: 700px;
   height: 500px;
   margin: 40px auto;
-  border-radius: 10px;
+  border-radius: 20px;
   box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.15);
   font-family: "Ubuntu", sans-serif;
+  color: #180ca4;
+  overflow: hidden;
 }
 
 @media (max-width: 600px) {
   #contact {
-    width: 95vw;
-  }
-}
-
-@media (max-width: 1000px) {
-  #contact {
-    width: 80vw;
+    width: 90vw;
+    flex-direction: column-reverse;
+    height: initial;
+    border: 1px solid gray;
   }
 }
 
 #contact .contact_sidebar {
-  flex: 2;
-  background-color: yellow;
+  flex-basis: 2;
+  background: linear-gradient(225deg, #ff8f00 0, #ffdc00 75%);
+  padding-top: 23px;
+}
+
+@media (max-width: 600px) {
+  #contact .contact_sidebar {
+    padding-top: 0;
+  }
+}
+
+#contact .contact_sidebar .sidebar_headline {
+  margin: 20px;
 }
 
 #contact .contact_sidebar .sidebar_description {
   margin: 20px;
-}
-
-#contact .contact_main {
-  flex: 4;
+  font-size: 1rem;
+  line-height: 1.4rem;
 }
 
 #contact .contact_main .contact_form .form_formMessage {
@@ -53,15 +61,41 @@
   margin: 20px;
 }
 
-#contact .contact_main .contact_form .form_formUser #name,
-#contact .contact_main .contact_form .form_formUser #mail {
-  margin: 0 10px;
-  width: 20%;
+@media (max-width: 600px) {
+  #contact .contact_main .contact_form .form_formUser {
+    flex-direction: column;
+  }
+}
+
+#contact .contact_main .contact_form .form_formUser .formUser_name {
+  display: flex;
+  flex-direction: column;
+  margin-right: 60px;
+}
+
+@media (max-width: 600px) {
+  #contact .contact_main .contact_form .form_formUser .formUser_name {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}
+
+#contact .contact_main .contact_form .form_formUser .formUser_name #name {
+  flex: 0 1 auto;
+}
+
+#contact .contact_main .contact_form .form_formUser .formUser_mail {
+  display: flex;
+  flex-direction: column;
+}
+
+#contact .contact_main .contact_form .form_formUser .formUser_mail #mail {
+  flex: 0 1 auto;
 }
 
 #contact .contact_main .contact_form button {
   position: relative;
-  transform: translateX(-50%);
+  transform: translateX(-75%);
   left: 50%;
   width: 100px;
   margin: 20px;
