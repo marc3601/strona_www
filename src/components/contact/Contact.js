@@ -1,6 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Contact.css";
 export default function Contact() {
+  const [name,setName] = useState("");
+  const [mail,setMail] = useState("");
+  const [message,setMessage] = useState("");
+
+  const handleMessage = (e) => {
+    e.preventDefault()
+    e.target.id === "name" && setName(e.target.value);
+    e.target.id === "mail" && setMail(e.target.value);
+    e.target.id === "message" && setMessage(e.target.value);
+    console.log(name,mail,message);
+  }
+
   return (
     <div>
       <div id="contact">
@@ -13,7 +25,7 @@ export default function Contact() {
           </p>
         </div>
         <div className="contact_main">
-          <form action="" className="contact_form">
+          <form action="/" className="contact_form" onChange={handleMessage}>
             <div className="form_formMessage">
               <h3>Skontaktuj się</h3>
               <label htmlFor="message">Wiadomość</label>
