@@ -9,15 +9,15 @@ import Contact from "./components/contact/Contact";
 export default function App() {
   const [width, setWidth] = useState(null);
   const [scrollDirection, setDirection] = useState("");
-  const headlineWWW = "Strony www";
+  const headlineWWW = "Lorem ipsum";
   const wwwDesc =
-    "Oferuję projekt oraz wykonanie stron internetowych. Możliwość zamówienia prostych wizytówek jaki i bardziej rozbudowanych stron wraz z formularzem, galerią itp. Strony charakteryzują się dużą prostotą oraz szybkością działania.";
-  const webApps = "Aplikacje internetowe";
+    "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis odio rerum id eligendi cumque iure earum, voluptates provident doloremque incidunt dolore sapiente delectus atque natus doloribus accusamus officiis ab dolorum.";
+  const webApps = "Lorem ipsum";
   const apsDesc =
-    "Możliwość wykonania niewielkiej aplikacji wedle pomysłu klienta. (Warstwa widoku + serwer + baza danych) Jest to rodzaj nieco bardziej rozbudowanej strony z dodatkową funkcjonalnością.";
-  const photoHead = "Fotografia produktowa";
+  "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis odio rerum id eligendi cumque iure earum, voluptates provident doloremque incidunt dolore sapiente delectus atque natus doloribus accusamus officiis ab dolorum.";
+  const photoHead = "Lorem ipsum";
   const photoDesc =
-    "Usługa wykonywana jako dodatek do strony. Możliwość wykonania zdjęć profesjonalnym sprzętem fotograficznym wraz z ich późniejszą obróbką. Pozwoli to uzyskać doskonałą jakość zdjęć co pozytywnie wpłynie na wygląd witryny.";
+  "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis odio rerum id eligendi cumque iure earum, voluptates provident doloremque incidunt dolore sapiente delectus atque natus doloribus accusamus officiis ab dolorum.";
   const images = [
     {
       image: "/landscape.jpg",

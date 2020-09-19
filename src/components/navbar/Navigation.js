@@ -29,17 +29,17 @@ const Navigation = ({ width, scrollDirection }) => {
       <ul>
         <li>
           <a onClick={handleBurger} href="#offer">
-            Strony internetowe
+            Lorem
           </a>
         </li>
         <li>
           <a onClick={handleBurger} href="#slider">
-            Oferta
+            Ipsum
           </a>
         </li>
         <li>
           <a onClick={defaultLink} href="/">
-            Kontakt
+            Dolor
           </a>
         </li>
       </ul>
@@ -48,7 +48,7 @@ const Navigation = ({ width, scrollDirection }) => {
   return (
     <div className="navigation" style={{...navHide, ...preventTransit}}>
       <div className="navigation_logo">
-        <p className="logo">{`< WEB DEV />`}</p>
+        <p className="logo">{`< DIV />`}</p>
       </div>
       {(isActive && navButtons) || (width > 1000 && navButtons)}
       <div onClick={handleBurger} className="navigation_burger">

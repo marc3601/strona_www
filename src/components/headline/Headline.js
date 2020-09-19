@@ -4,13 +4,15 @@ import "./Hedline.css";
 export default function Headline() {
   return (
     <div className="headliner">
-      <h2 className="headline_title">Komponenty strony w dowolnym układzie.</h2>
+      <h2 className="headline_title">Lorem ipsum dolor.</h2>
       <p className="headline_description">
-        Każda tworzona strona jest maksymalnie dostosowana do indywidualnych
-        potrzeb klienta. Składa się tylko z elementów, które są
-        najistotniejsze z punktu widzenia prezentacji określonych usług lub
-        produktów.<br></br><span className="headline_important">Poniżej prezentuje przykładowe elementy składowe
-        strony.</span>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur
+        blanditiis magni repudiandae dolore ea explicabo sunt, quis consequuntur
+        qui adipisci placeat nam minima quo, eius maxime earum impedit nobis!
+        Nemo.<br></br>
+        <span className="headline_important">
+          Lorem ipsum dolor sit, amet consectetur adipisicing.
+        </span>
       </p>
     </div>
   );

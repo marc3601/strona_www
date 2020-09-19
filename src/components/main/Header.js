@@ -12,7 +12,7 @@ const Header = () => {
           <img className="laptop" src="/laptop.png" alt="laptop" />
         </div>
       </div>
-      <h1 className="main_title">Strony i aplikacje internetowe</h1>
+      <h1 className="main_title">Lorem ipsum</h1>
       <div className="mainBackground"></div>
     </div>
   );

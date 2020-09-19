@@ -17,11 +17,9 @@ export default function Contact() {
     <div>
       <div id="contact">
         <div className="contact_sidebar">
-          <h3 className="sidebar_headline">Zapraszam do kontaktu.</h3>
+          <h3 className="sidebar_headline">Lorem ipsum</h3>
           <p className="sidebar_description">
-            Niezależnie czy mają Państwo pomysł na stronę lub szukają gotowego
-            projektu, dla każdego postaram się coś znaleźć. Zapraszam do
-            kontaktu.
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit voluptas deserunt quod.
           </p>
         </div>
         <div className="contact_main">
