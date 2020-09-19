@@ -61,8 +61,8 @@ export default function App() {
       }
     };
     console.log(
-      "%cThis is an early development version. Bugs will appear.😄",
-      "background: red; color: yellow; font-size: x-large"
+      "%cThis is an early development version.",
+      "background: green; color: yellow; font-size: x-large"
     );
   }, []);
 
