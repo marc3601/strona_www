@@ -14,6 +14,7 @@ export default function Slider({ images, imgVisible, width }) {
   const transformation = {
     transform: `translateX(${transform}vw)`,
   };
+
   const handleRight = () => {
     setTransform(transform - 100 / imgVisible);
     if (imagesOnTheRight <= 1) {
@@ -25,6 +26,7 @@ export default function Slider({ images, imgVisible, width }) {
     setImagesOnTheRight(imagesOnTheRight - 1);
     setImagesOnTheLeft(imagesOnTheLeft + 1);
   };
+
   const handleLeft = () => {
     setTransform(transform + 100 / imgVisible);
     if (imagesOnTheRight >= 0) {
@@ -36,11 +38,13 @@ export default function Slider({ images, imgVisible, width }) {
     setImagesOnTheRight(imagesOnTheRight + 1);
     setImagesOnTheLeft(imagesOnTheLeft - 1);
   };
+
   const makeDots = (dotCount, imagesOnTheLeft) => {
     const arr = [];
     for (let i = 0; i < dotCount; i++) {
       arr.push(
         <div
+          onClick={() => dotsNavigation(i)}
           className={`dot ${imagesOnTheLeft === i ? "activeDot" : ""}`}
         ></div>
       );
@@ -53,6 +57,42 @@ export default function Slider({ images, imgVisible, width }) {
       </div>
     );
   };
+
+  const dotsNavigation = (id) => {
+    let value = id - imagesOnTheLeft;
+    let condition = `${value.toString().slice(0, 1)}` === "-";
+    if (condition) {
+      setTransform(
+        transform +
+          parseInt(`${parseInt(value.toString().slice(1, 2))}00`) / imgVisible
+      );
+      console.log(parseInt(value.toString().slice(1, 2)));
+      if (imagesOnTheRight >= 0) {
+        setCanClickRight(true);
+      }
+      if (imagesOnTheLeft <= 1) {
+        setCanClickLeft(false);
+      }
+      setImagesOnTheRight(
+        imagesOnTheRight + parseInt(value.toString().slice(1, 2))
+      );
+      setImagesOnTheLeft(
+        imagesOnTheLeft - parseInt(value.toString().slice(1, 2))
+      );
+    } else {
+      setTransform(transform - parseInt(`${value}00`) / imgVisible);
+      console.log(value);
+      if (imagesOnTheRight <= 1) {
+        setCanClickRight(false);
+      }
+      if (imagesOnTheLeft >= 0) {
+        setCanClickLeft(true);
+      }
+      setImagesOnTheRight(imagesOnTheRight - value);
+      setImagesOnTheLeft(imagesOnTheLeft + value);
+    }
+  };
+
   useEffect(() => {
     window.addEventListener("resize", () => {
       setPrevent({ transition: "none" });
