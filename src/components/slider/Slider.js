@@ -14,7 +14,6 @@ export default function Slider({ images, imgVisible, width }) {
   const transformation = {
     transform: `translateX(${transform}vw)`,
   };
-
   const handleRight = () => {
     setTransform(transform - 100 / imgVisible);
     if (imagesOnTheRight <= 1) {
@@ -40,11 +39,20 @@ export default function Slider({ images, imgVisible, width }) {
   const makeDots = (dotCount, imagesOnTheLeft) => {
     const arr = [];
     for (let i = 0; i < dotCount; i++) {
-      arr.push(<div className={`dot ${imagesOnTheLeft === i ? "activeDot" : ""}`}></div>);
+      arr.push(
+        <div
+          className={`dot ${imagesOnTheLeft === i ? "activeDot" : ""}`}
+        ></div>
+      );
     }
-    return <div className="dots_container">{arr.map((item,id) => <React.Fragment key={id}>{item}</React.Fragment>)}</div>;
+    return (
+      <div className="dots_container">
+        {arr.map((item, id) => (
+          <React.Fragment key={id}>{item}</React.Fragment>
+        ))}
+      </div>
+    );
   };
-
   useEffect(() => {
     window.addEventListener("resize", () => {
       setPrevent({ transition: "none" });
@@ -52,9 +60,6 @@ export default function Slider({ images, imgVisible, width }) {
         setPrevent({ transition: ".5s ease-out" });
       }, 10);
     });
-  }, []);
-
-  useEffect(() => {
     setImagesOnTheRight(images.length - imgVisible);
     setImagesOnTheLeft(0);
     setCanClickRight(true);
@@ -69,14 +74,13 @@ export default function Slider({ images, imgVisible, width }) {
         style={{ ...transformation, ...preventTransit }}
       >
         {images.map((image, id) => (
-            <img
-              key={id}
-              className="slider_picture"
-              src={image.image}
-              alt={image.alt}
-            />
+          <img
+            key={id}
+            className="slider_picture"
+            src={image.image}
+            alt={image.alt}
+          />
         ))}
-       
       </div>
       <div
         onClick={canClickLeft ? handleLeft : undefined}

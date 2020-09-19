@@ -75,6 +75,10 @@
   padding: 5px;
 }
 
+#contact .contact_main .contact_form .form_formMessage #message:focus {
+  outline: 1px solid gray;
+}
+
 #contact .contact_main .contact_form .form_formUser {
   display: flex;
   margin: 30px;
@@ -104,6 +108,10 @@
   border: none;
 }
 
+#contact .contact_main .contact_form .form_formUser .formUser_name #name:focus {
+  outline: 1px solid gray;
+}
+
 #contact .contact_main .contact_form .form_formUser .formUser_mail {
   display: flex;
   flex-direction: column;
@@ -111,6 +119,10 @@
 
 #contact .contact_main .contact_form .form_formUser .formUser_mail #mail {
   border: none;
+}
+
+#contact .contact_main .contact_form .form_formUser .formUser_mail #mail:focus {
+  outline: 1px solid gray;
 }
 
 #contact .contact_main .contact_form button {
@@ -129,6 +141,7 @@
   position: relative;
   overflow: hidden;
   z-index: 1;
+  cursor: pointer;
 }
 
 #contact .contact_main .contact_form button:after {

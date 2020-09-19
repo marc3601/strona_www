@@ -66,6 +66,9 @@
           &::placeholder {
             padding: 5px;
           }
+          &:focus {
+            outline: 1px solid gray;
+          }
         }
       }
       .form_formUser {
@@ -85,6 +88,9 @@
           }
           #name {
             border: none;
+            &:focus {
+              outline: 1px solid gray;
+            }
           }
         }
         .formUser_mail {
@@ -92,6 +98,9 @@
           flex-direction: column;
           #mail {
             border: none;
+            &:focus {
+              outline: 1px solid gray;
+            }
           }
         }
       }
@@ -111,6 +120,7 @@
         position: relative;
         overflow: hidden;
         z-index: 1;
+        cursor: pointer;
         &:after {
           content: "";
           position: absolute;
