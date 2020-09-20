@@ -49,6 +49,7 @@ export default function Slider({ images, imgVisible, width }) {
         ></div>
       );
     }
+
     return (
       <div className="dots_container">
         {arr.map((item, id) => (
@@ -61,18 +62,12 @@ export default function Slider({ images, imgVisible, width }) {
   const dotsNavigation = (id) => {
     let value = id - imagesOnTheLeft;
     let condition = `${value.toString().slice(0, 1)}` === "-";
+
     if (condition) {
       setTransform(
         transform +
           parseInt(`${parseInt(value.toString().slice(1, 2))}00`) / imgVisible
       );
-      console.log(parseInt(value.toString().slice(1, 2)));
-      if (imagesOnTheRight >= 0) {
-        setCanClickRight(true);
-      }
-      if (imagesOnTheLeft <= 1) {
-        setCanClickLeft(false);
-      }
       setImagesOnTheRight(
         imagesOnTheRight + parseInt(value.toString().slice(1, 2))
       );
@@ -81,17 +76,26 @@ export default function Slider({ images, imgVisible, width }) {
       );
     } else {
       setTransform(transform - parseInt(`${value}00`) / imgVisible);
-      console.log(value);
-      if (imagesOnTheRight <= 1) {
-        setCanClickRight(false);
-      }
-      if (imagesOnTheLeft >= 0) {
-        setCanClickLeft(true);
-      }
       setImagesOnTheRight(imagesOnTheRight - value);
       setImagesOnTheLeft(imagesOnTheLeft + value);
     }
   };
+
+  useEffect(() => {
+    if (imagesOnTheRight > 0) {
+      setCanClickRight(true);
+    } else if (imagesOnTheRight < 1) {
+      setCanClickRight(false);
+    }
+  }, [imagesOnTheRight]);
+
+  useEffect(() => {
+    if (imagesOnTheLeft < 1) {
+      setCanClickLeft(false);
+    } else if (imagesOnTheLeft > 0) {
+      setCanClickLeft(true);
+    }
+  }, [imagesOnTheLeft]);
 
   useEffect(() => {
     window.addEventListener("resize", () => {
