@@ -50,6 +50,9 @@
     background: linear-gradient(282deg, #d5e5fd 0, #ffffff 89%);
     .contact_form {
       .form_formMessage {
+        label {
+          margin-bottom: 10px;
+        }
         display: flex;
         flex-direction: column;
         margin: 30px;
@@ -74,6 +77,9 @@
       .form_formUser {
         display: flex;
         margin: 30px;
+        label {
+          margin-bottom: 10px;
+        }
         @include mobile {
           flex-direction: column;
           margin: 20px;

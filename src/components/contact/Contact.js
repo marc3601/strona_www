@@ -30,7 +30,7 @@ export default function Contact() {
               <h3>Skontaktuj się</h3>
               <label htmlFor="message">Wiadomość</label>
               <textarea
-                placeholder="This is an early development version..."
+                placeholder="Napisz wiadomość..."
                 name="message"
                 id="message"
                 rows="15"

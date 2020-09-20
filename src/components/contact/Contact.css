@@ -55,6 +55,10 @@
   margin: 30px;
 }
 
+#contact .contact_main .contact_form .form_formMessage label {
+  margin-bottom: 10px;
+}
+
 @media (max-width: 650px) {
   #contact .contact_main .contact_form .form_formMessage {
     margin: 20px;
@@ -82,6 +86,10 @@
 #contact .contact_main .contact_form .form_formUser {
   display: flex;
   margin: 30px;
+}
+
+#contact .contact_main .contact_form .form_formUser label {
+  margin-bottom: 10px;
 }
 
 @media (max-width: 650px) {

@@ -17,24 +17,12 @@ export default function Slider({ images, imgVisible, width }) {
 
   const handleRight = () => {
     setTransform(transform - 100 / imgVisible);
-    if (imagesOnTheRight <= 1) {
-      setCanClickRight(false);
-    }
-    if (imagesOnTheLeft >= 0) {
-      setCanClickLeft(true);
-    }
     setImagesOnTheRight(imagesOnTheRight - 1);
     setImagesOnTheLeft(imagesOnTheLeft + 1);
   };
 
   const handleLeft = () => {
     setTransform(transform + 100 / imgVisible);
-    if (imagesOnTheRight >= 0) {
-      setCanClickRight(true);
-    }
-    if (imagesOnTheLeft <= 1) {
-      setCanClickLeft(false);
-    }
     setImagesOnTheRight(imagesOnTheRight + 1);
     setImagesOnTheLeft(imagesOnTheLeft - 1);
   };
@@ -49,7 +37,6 @@ export default function Slider({ images, imgVisible, width }) {
         ></div>
       );
     }
-
     return (
       <div className="dots_container">
         {arr.map((item, id) => (
@@ -62,7 +49,6 @@ export default function Slider({ images, imgVisible, width }) {
   const dotsNavigation = (id) => {
     let value = id - imagesOnTheLeft;
     let condition = `${value.toString().slice(0, 1)}` === "-";
-
     if (condition) {
       setTransform(
         transform +
@@ -112,41 +98,48 @@ export default function Slider({ images, imgVisible, width }) {
   }, [imgVisible, images.length]);
 
   return (
-    <div id="slider">
-      <div
-        className="slider_images"
-        style={{ ...transformation, ...preventTransit }}
-      >
-        {images.map((image, id) => (
-          <img
-            key={id}
-            className="slider_picture"
-            src={image.image}
-            alt={image.alt}
+    <>
+      <h1 className="slider_title">Slider</h1>
+      <p className="slider_description">
+        Prosty sposób na prezentację zdjęć na stronie.
+      </p>
+      <div className="slider">
+        <div
+          className="slider_images"
+          style={{ ...transformation, ...preventTransit }}
+        >
+          {images.map((image, id) => (
+            <img
+              key={id}
+              className="slider_picture"
+              src={image.image}
+              alt={image.alt}
+            />
+          ))}
+          <button className="btn">Zobacz więcej</button>
+        </div>
+        <div
+          onClick={canClickLeft ? handleLeft : undefined}
+          className="slider_left"
+          style={!canClickLeft ? { width: "50px" } : undefined}
+        >
+          <ArrowIcon
+            color={canClickLeft ? "#ff8f00" : "lightgray"}
+            opacity={!canClickLeft ? ".7" : "1"}
           />
-        ))}
+        </div>
+        <div
+          onClick={canClickRight ? handleRight : undefined}
+          className="slider_right"
+          style={!canClickRight ? { width: "50px" } : undefined}
+        >
+          <ArrowIcon
+            color={canClickRight ? "#ff8f00" : "lightgray"}
+            opacity={!canClickRight ? ".7" : "1"}
+          />
+        </div>
+        {width < 600 && makeDots(images.length, imagesOnTheLeft)}
       </div>
-      <div
-        onClick={canClickLeft ? handleLeft : undefined}
-        className="slider_left"
-        style={!canClickLeft ? { width: "50px" } : undefined}
-      >
-        <ArrowIcon
-          color={canClickLeft ? "#ff8f00" : "lightgray"}
-          opacity={!canClickLeft ? ".7" : "1"}
-        />
-      </div>
-      <div
-        onClick={canClickRight ? handleRight : undefined}
-        className="slider_right"
-        style={!canClickRight ? { width: "50px" } : undefined}
-      >
-        <ArrowIcon
-          color={canClickRight ? "#ff8f00" : "lightgray"}
-          opacity={!canClickRight ? ".7" : "1"}
-        />
-      </div>
-      {width < 600 && makeDots(images.length, imagesOnTheLeft)}
-    </div>
+    </>
   );
 }
