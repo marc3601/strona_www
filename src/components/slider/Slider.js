@@ -11,6 +11,7 @@ export default function Slider({ images, imgVisible, width }) {
   const [imagesOnTheLeft, setImagesOnTheLeft] = useState(0);
   const [canClickRight, setCanClickRight] = useState(true);
   const [canClickLeft, setCanClickLeft] = useState(false);
+  const [info, infoShow] = useState(false);
   const transformation = {
     transform: `translateX(${transform}vw)`,
   };
@@ -101,7 +102,8 @@ export default function Slider({ images, imgVisible, width }) {
     <>
       <h1 className="slider_title">Slider</h1>
       <p className="slider_description">
-        Prosty sposób na prezentację zdjęć na stronie.
+        Prosty sposób na prezentację zdjęć na stronie. Poniżej prosty przykład
+        jednej z możliwych wersji.
       </p>
       <div className="slider">
         <div
@@ -116,7 +118,16 @@ export default function Slider({ images, imgVisible, width }) {
               alt={image.alt}
             />
           ))}
-          <button className="btn">Zobacz więcej</button>
+          <div className="btn_container">
+            {info ? (
+              <div className="bubble">
+                <p className="bubble_text">Link do podstrony lub komunikat</p>
+              </div>
+            ) : null}
+            <button className="btn" onClick={() => infoShow(!info)}>
+              Zobacz więcej
+            </button>
+          </div>
         </div>
         <div
           onClick={canClickLeft ? handleLeft : undefined}

@@ -57,26 +57,75 @@
         width: calc(100vw / 1);
       }
     }
-    .btn {
+    .btn_container {
       position: absolute;
       top: 60%;
       left: 50%;
       transform: translateX(-50%);
-      margin: 0;
-      padding: 0 3.5rem;
-      height: 2.81rem;
-      line-height: 2.8rem;
-      border-radius: 7px;
-      background-color: #0070f3;
-      box-shadow: 0 4px 14px 0 rgba(0,118,255,0.39);
-      color: white;
-      transition: .5s ease;
-      cursor: pointer;
-      @include mobile {
-        top: 50%;
+      .bubble {
+        position: absolute;
+        width: 243px;
+        height: 51px;
+        padding: 4px;
+        background: #ffb454;
+        border-radius: 11px;
+        top: -81px;
+        left: 50%;
+        transform: translateX(-50%);
+        @include mobile {
+          width: 169px;
+          height: 37px;
+          padding: 4px;
+          background: #ffb454;
+          border-radius: 11px;
+          top: -64px;
+        }
+        .bubble_text {
+          font-family: "Ubuntu", sans-serif;
+          font-size: 0.9rem;
+          text-align: center;
+          line-height: 26px;
+          color: #180ca4;
+          @include mobile {
+            font-size: .7rem;
+            line-height: 12px;
+          }
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          border-style: solid;
+          border-width: 21px 26px 0;
+          border-color: #ffb454 transparent;
+          display: block;
+          width: 0;
+          z-index: 1;
+          bottom: -21px;
+          left: 50%;
+          transform: translateX(-50%);
+          @include mobile {
+            bottom: -18px;
+          }
+        }
       }
-      &:hover {
-        background-color: lighten($color: #0070f3, $amount: 20)
+
+      .btn {
+        margin: 0;
+        padding: 0 2.5rem;
+        height: 2.81rem;
+        line-height: 2.8rem;
+        border-radius: 7px;
+        background-color: #0070f3;
+        box-shadow: 0 4px 14px 0 rgba(0, 118, 255, 0.39);
+        color: white;
+        transition: 0.2s ease;
+        cursor: pointer;
+        @include mobile {
+          top: 50%;
+        }
+        &:hover {
+          background-color: lighten($color: #0070f3, $amount: 10);
+        }
       }
     }
   }
