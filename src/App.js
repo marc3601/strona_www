@@ -1,10 +1,11 @@
-import React, { useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
 import Navigation from "./components/navbar/Navigation";
 import Header from "./components/main/Header";
 import Offer from "./components/offer/Offer";
 import Slider from "./components/slider/Slider";
 import Headline from "./components/headline/Headline";
+import Modal from "./components/modal/Modal";
 import Contact from "./components/contact/Contact";
 export default function App() {
   const [width, setWidth] = useState(null);
@@ -100,8 +101,8 @@ export default function App() {
       ) : (
         <Slider images={images} imgVisible={width > 1300 ? 3 : 2} />
       )}
-      <Contact/>
+      <Modal />
+      <Contact />
     </div>
   );
 }
-

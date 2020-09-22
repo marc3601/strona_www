@@ -20,12 +20,14 @@ export default function Slider({ images, imgVisible, width }) {
     setTransform(transform - 100 / imgVisible);
     setImagesOnTheRight(imagesOnTheRight - 1);
     setImagesOnTheLeft(imagesOnTheLeft + 1);
+    if (info) infoShow(false);
   };
 
   const handleLeft = () => {
     setTransform(transform + 100 / imgVisible);
     setImagesOnTheRight(imagesOnTheRight + 1);
     setImagesOnTheLeft(imagesOnTheLeft - 1);
+    if (info) infoShow(false);
   };
 
   const makeDots = (dotCount, imagesOnTheLeft) => {
@@ -66,6 +68,7 @@ export default function Slider({ images, imgVisible, width }) {
       setImagesOnTheRight(imagesOnTheRight - value);
       setImagesOnTheLeft(imagesOnTheLeft + value);
     }
+    if (info) infoShow(false);
   };
 
   useEffect(() => {
