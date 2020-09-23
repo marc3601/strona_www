@@ -1,0 +1,45 @@
+.element_title {
+  font-family: "Fredoka One", cursive;
+  font-size: 2.8rem;
+  text-align: center;
+  color: #180ca4;
+  letter-spacing: 4px;
+  position: relative;
+}
+
+@media (max-width: 1000px) {
+  .element_title {
+    font-size: 2.4rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .element_title {
+    font-size: 2.1rem;
+  }
+}
+
+.element_description {
+  text-align: center;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1.3rem;
+  line-height: 2rem;
+  color: #180ca4;
+}
+
+.element_description .crossed {
+  text-decoration: line-through;
+}
+
+@media (max-width: 1000px) {
+  .element_description {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .element_description {
+    font-size: 1.1rem;
+  }
+}
+/*# sourceMappingURL=ElementHead.css.map */

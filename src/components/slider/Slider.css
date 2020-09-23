@@ -1,45 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
-.slider_title {
-  font-family: "Fredoka One", cursive;
-  font-size: 2.8rem;
-  text-align: center;
-  color: #180ca4;
-  letter-spacing: 4px;
-  position: relative;
-}
-
-@media (max-width: 1000px) {
-  .slider_title {
-    font-size: 2.4rem;
-  }
-}
-
-@media (max-width: 600px) {
-  .slider_title {
-    font-size: 2.1rem;
-  }
-}
-
-.slider_description {
-  text-align: center;
-  font-family: "Ubuntu", sans-serif;
-  font-size: 1.3rem;
-  line-height: 2rem;
-  color: #180ca4;
-}
-
-@media (max-width: 1000px) {
-  .slider_description {
-    font-size: 1.2rem;
-  }
-}
-
-@media (max-width: 600px) {
-  .slider_description {
-    font-size: 1.1rem;
-  }
-}
-
 .slider {
   user-select: none;
   margin: 20px 0;
@@ -136,33 +95,6 @@
   .slider .slider_images .btn_container .bubble::after {
     bottom: -18px;
   }
-}
-
-.slider .slider_images .btn_container .btn {
-  margin: 0;
-  padding: 0 2.5rem;
-  height: 2.81rem;
-  line-height: 2.8rem;
-  border-radius: 7px;
-  background-color: #0070f3;
-  box-shadow: 0 4px 14px 0 rgba(0, 118, 255, 0.39);
-  color: white;
-  transition: 0.2s ease;
-  cursor: pointer;
-}
-
-@media (max-width: 600px) {
-  .slider .slider_images .btn_container .btn {
-    top: 50%;
-  }
-}
-
-.slider .slider_images .btn_container .btn:hover {
-  background-color: #278bff;
-}
-
-.slider .slider_images .btn_container .btn:focus {
-  outline: 0px;
 }
 
 .slider .slider_left,

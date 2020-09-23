@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import ArrowIcon from "./ArrowIcon";
 import "./Slider.css";
+import ElementHead from "../utilities/ElementHead";
+import Button from "../utilities/Button";
 
 export default function Slider({ images, imgVisible, width }) {
   const [transform, setTransform] = useState(0);
@@ -103,11 +105,11 @@ export default function Slider({ images, imgVisible, width }) {
 
   return (
     <>
-      <h1 className="slider_title">Slider</h1>
-      <p className="slider_description">
-        Prosty sposób na prezentację zdjęć na stronie. Poniżej prosty przykład
-        jednej z możliwych wersji.
-      </p>
+      <ElementHead
+        title="Slider"
+        description="Prosty sposób na prezentację zdjęć na stronie. Poniżej prosty przykład
+        jednej z możliwych wersji."
+      />
       <div className="slider">
         <div
           className="slider_images"
@@ -127,9 +129,7 @@ export default function Slider({ images, imgVisible, width }) {
                 <p className="bubble_text">Link do podstrony lub komunikat</p>
               </div>
             ) : null}
-            <button className="btn" onClick={() => infoShow(!info)}>
-              Zobacz więcej
-            </button>
+            <Button text="Zobacz więcej" action={() => infoShow(!info)} />
           </div>
         </div>
         <div

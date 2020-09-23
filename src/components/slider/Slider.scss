@@ -14,33 +14,6 @@
     @content;
   }
 }
-.slider_title {
-  font-family: "Fredoka One", cursive;
-  font-size: 2.8rem;
-  text-align: center;
-  color: #180ca4;
-  letter-spacing: 4px;
-  position: relative;
-  @include tablet {
-    font-size: 2.4rem;
-  }
-  @include mobile {
-    font-size: 2.1rem;
-  }
-}
-.slider_description {
-  text-align: center;
-  font-family: "Ubuntu", sans-serif;
-  font-size: 1.3rem;
-  line-height: 2rem;
-  color: #180ca4;
-  @include tablet {
-    font-size: 1.2rem;
-  }
-  @include mobile {
-    font-size: 1.1rem;
-  }
-}
 .slider {
   user-select: none;
   margin: 20px 0;
@@ -110,28 +83,6 @@
           @include mobile {
             bottom: -18px;
           }
-        }
-      }
-
-      .btn {
-        margin: 0;
-        padding: 0 2.5rem;
-        height: 2.81rem;
-        line-height: 2.8rem;
-        border-radius: 7px;
-        background-color: #0070f3;
-        box-shadow: 0 4px 14px 0 rgba(0, 118, 255, 0.39);
-        color: white;
-        transition: 0.2s ease;
-        cursor: pointer;
-        @include mobile {
-          top: 50%;
-        }
-        &:hover {
-          background-color: lighten($color: #0070f3, $amount: 10);
-        }
-        &:focus {
-          outline: 0px;
         }
       }
     }

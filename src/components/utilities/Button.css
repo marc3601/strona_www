@@ -1,0 +1,27 @@
+.btn {
+  margin: 0;
+  padding: 0 2.5rem;
+  height: 2.81rem;
+  line-height: 2.8rem;
+  border-radius: 7px;
+  background-color: #0070f3;
+  box-shadow: 0 4px 14px 0 rgba(0, 118, 255, 0.39);
+  color: white;
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .btn {
+    top: 50%;
+  }
+}
+
+.btn:hover {
+  background-color: #278bff;
+}
+
+.btn:focus {
+  outline: 0px;
+}
+/*# sourceMappingURL=Button.css.map */
