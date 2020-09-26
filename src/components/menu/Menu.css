@@ -1,0 +1,68 @@
+.menu_section .menu_slide {
+  position: relative;
+  width: 10vw;
+  padding: 15px;
+  margin: 0 auto;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  font-family: "Ubuntu", sans-serif;
+  background: linear-gradient(225deg, #ff8f00 0, #ffdc00 75%);
+  text-align: center;
+  cursor: pointer;
+}
+
+@media (max-width: 1300px) {
+  .menu_section .menu_slide {
+    width: 20vw;
+  }
+}
+
+@media (max-width: 1000px) {
+  .menu_section .menu_slide {
+    width: 25vw;
+  }
+}
+
+@media (max-width: 600px) {
+  .menu_section .menu_slide {
+    width: 50vw;
+  }
+}
+
+.menu_section .menu_slide .menu_slide_item1,
+.menu_section .menu_slide .menu_slide_item2,
+.menu_section .menu_slide .menu_slide_item3,
+.menu_section .menu_slide .menu_slide_item4 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: 0.5s ease;
+  opacity: 0;
+  width: inherit;
+  padding: 15px;
+  border: 1px 1px solid gray;
+  background: linear-gradient(142deg, #d5e5fd 0, #ffffff 89%);
+}
+
+.menu_section .menu_slide:hover > .menu_slide_item1 {
+  transform: translateY(100%);
+  opacity: 1;
+}
+
+.menu_section .menu_slide:hover > .menu_slide_item2 {
+  transform: translateY(200%);
+  opacity: 1;
+}
+
+.menu_section .menu_slide:hover > .menu_slide_item3 {
+  transform: translateY(300%);
+  opacity: 1;
+}
+
+.menu_section .menu_slide:hover > .menu_slide_item4 {
+  transform: translateY(400%);
+  opacity: 1;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+/*# sourceMappingURL=Menu.css.map */

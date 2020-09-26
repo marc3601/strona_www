@@ -1,6 +1,7 @@
 .animation_container .animation_text {
   text-align: center;
   font-family: "Poppins", sans-serif;
+  color: #180ca4;
 }
 
 .animation_container .animation_text .vertical_bar {

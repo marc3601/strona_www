@@ -27,7 +27,7 @@ export default function Modal() {
                 title="Informacja."
                 description="W tym miejscu może pojawiać się ważny komunikat w wyniku wykonania czynności przez użytkownika lub po upływie określonego czasu."
               />
-              <TextAnimation text="Message to the user!!!" />
+              <TextAnimation text="Animowany tekst." />
             </div>
           </>
         ) : null}

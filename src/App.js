@@ -6,6 +6,7 @@ import Offer from "./components/offer/Offer";
 import Slider from "./components/slider/Slider";
 import Headline from "./components/headline/Headline";
 import Modal from "./components/modal/Modal";
+import Menu from "./components/menu/Menu"
 import Contact from "./components/contact/Contact";
 export default function App() {
   const [width, setWidth] = useState(null);
@@ -102,6 +103,7 @@ export default function App() {
         <Slider images={images} imgVisible={width > 1300 ? 3 : 2} />
       )}
       <Modal />
+      <Menu/>
       <Contact />
     </div>
   );
