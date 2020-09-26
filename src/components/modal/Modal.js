@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import "./Modal.css";
 import ElementHead from "../utilities/ElementHead";
 import Button from "../utilities/Button";
+import TextAnimation from "../utilities/TextAnimation";
 export default function Modal() {
   const [isActive, setActive] = useState(false);
-
   return (
     <>
       <ElementHead
@@ -24,9 +24,10 @@ export default function Modal() {
             <div className="modal_background" />
             <div className="modal_body">
               <ElementHead
-                title="Informacja dla użytkowników."
+                title="Informacja."
                 description="W tym miejscu może pojawiać się ważny komunikat w wyniku wykonania czynności przez użytkownika lub po upływie określonego czasu."
               />
+              <TextAnimation text="Message to the user!!!" />
             </div>
           </>
         ) : null}

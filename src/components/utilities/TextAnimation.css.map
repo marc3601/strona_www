@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AACI,oBADgB,CAChB,eAAe,CAAC;EACZ,UAAU,EAAE,MAAM;EAClB,WAAW,EAAE,qBAAqB;CAKrC;;AARL,AAIQ,oBAJY,CAChB,eAAe,CAGX,aAAa,CAAC;EACV,WAAW,EAAE,4BAA4B;EACzC,WAAW,EAAE,GAAG;CACnB",
+    "sources": [
+        "TextAnimation.scss"
+    ],
+    "names": [],
+    "file": "TextAnimation.css"
+}
