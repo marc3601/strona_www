@@ -103,7 +103,7 @@ export default function App() {
         <Slider images={images} imgVisible={width > 1300 ? 3 : 2} />
       )}
       <Modal />
-      <Menu/>
+      <Menu width={width}/>
       <Contact />
     </div>
   );
