@@ -6,8 +6,10 @@ import Offer from "./components/offer/Offer";
 import Slider from "./components/slider/Slider";
 import Headline from "./components/headline/Headline";
 import Modal from "./components/modal/Modal";
-import Menu from "./components/menu/Menu"
+import Menu from "./components/menu/Menu";
+import Questions from "./components/questions/Questions";
 import Contact from "./components/contact/Contact";
+import ElementHead from "./components/utilities/ElementHead";
 export default function App() {
   const [width, setWidth] = useState(null);
   const [scrollDirection, setDirection] = useState("");
@@ -72,30 +74,32 @@ export default function App() {
     <div className="container">
       <Navigation width={width} scrollDirection={scrollDirection} />
       <Header />
-      <Offer
-        key={1}
-        image={"/websites.svg"}
-        side="left"
-        width={width}
-        head={headlineWWW}
-        desc={wwwDesc}
-      />
-      <Offer
-        key={2}
-        image={"/application.svg"}
-        side="right"
-        width={width}
-        head={webApps}
-        desc={apsDesc}
-      />
-      <Offer
-        key={3}
-        image={"/camera.svg"}
-        side="left"
-        width={width}
-        head={photoHead}
-        desc={photoDesc}
-      />
+      <div id="offer">
+        <Offer
+          key={1}
+          image={"/websites.svg"}
+          side="left"
+          width={width}
+          head={headlineWWW}
+          desc={wwwDesc}
+        />
+        <Offer
+          key={2}
+          image={"/application.svg"}
+          side="right"
+          width={width}
+          head={webApps}
+          desc={apsDesc}
+        />
+        <Offer
+          key={3}
+          image={"/camera.svg"}
+          side="left"
+          width={width}
+          head={photoHead}
+          desc={photoDesc}
+        />
+      </div>
       <Headline />
       {width <= 600 ? (
         <Slider images={images} imgVisible={1} width={width} />
@@ -103,7 +107,23 @@ export default function App() {
         <Slider images={images} imgVisible={width > 1300 ? 3 : 2} />
       )}
       <Modal />
-      <Menu width={width}/>
+      <Menu width={width} />
+      <ElementHead
+        title="FAQ"
+        description="Sekcja najczęściej zadawanych pytań pozwoli odpowiedzieć na często powtarzające się pytania."
+      />
+      <Questions
+        question="Jaki koszt wykonania strony?"
+        answer="Jest to zawsze ustalane indywidualnie w zależności od stopnia skomplikowania."
+      />
+      <Questions
+        question="Jaki czas oczekiwania na wykonanie?"
+        answer="Zależy to od ilości zleceń w danym okresie. Zazwyczaj ok. tygodnia."
+      />
+      <Questions
+        question="Zakup domeny w cenie?"
+        answer="Tak, usługa obejmuje również zakup hostingu i domeny."
+      />
       <Contact />
     </div>
   );

@@ -20,7 +20,7 @@
     @content;
   }
 }
-#offer {
+.offer {
   display: flex;
   width: 60vw;
   margin: 30px auto 10px;
@@ -50,7 +50,6 @@
       }
       @include mobile {
         width: 60%;
-        
       }
     }
   }

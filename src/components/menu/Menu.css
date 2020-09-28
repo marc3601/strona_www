@@ -1,8 +1,15 @@
+.menu_section {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
 .menu_section .menu_slide {
+  display: inline-block;
   position: relative;
   width: 10vw;
   padding: 15px;
-  margin: 0 auto;
+  margin: 20px auto;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   font-family: "Ubuntu", sans-serif;
@@ -32,6 +39,7 @@
 
 .menu_section .menu_slide:hover {
   box-shadow: 15px 21px 52px -8px rgba(24, 12, 164, 0.49);
+  transform: translateY(-3px);
 }
 
 .menu_section .menu_slide .menu_slide_item1,
@@ -99,5 +107,14 @@
   transform: translateY(400%);
   opacity: 1;
   border-bottom-left-radius: 10px;
+}
+
+.menu_section .blue_theme {
+  background: linear-gradient(225deg, #00dcc0 0, #005af0 75%);
+  color: white;
+}
+
+.menu_section .black {
+  color: black;
 }
 /*# sourceMappingURL=Menu.css.map */

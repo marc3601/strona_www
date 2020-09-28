@@ -1,36 +1,36 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap");
-#offer {
+.offer {
   display: flex;
   width: 60vw;
   margin: 30px auto 10px;
 }
 
 @media (max-width: 1450px) {
-  #offer {
+  .offer {
     width: 80vw;
   }
 }
 
 @media (max-width: 1300px) {
-  #offer {
+  .offer {
     width: 90vw;
   }
 }
 
 @media (max-width: 1000px) {
-  #offer {
+  .offer {
     flex-direction: column;
     width: 100vw;
   }
 }
 
-#offer .offer_image {
+.offer .offer_image {
   flex: 1;
   text-align: center;
   margin: 20px 0;
 }
 
-#offer .offer_image .coding {
+.offer .offer_image .coding {
   width: 70%;
   position: relative;
   top: 50%;
@@ -38,31 +38,31 @@
 }
 
 @media (max-width: 1000px) {
-  #offer .offer_image .coding {
+  .offer .offer_image .coding {
     width: 40%;
     transform: none;
   }
 }
 
 @media (max-width: 600px) {
-  #offer .offer_image .coding {
+  .offer .offer_image .coding {
     width: 60%;
   }
 }
 
-#offer .offer_description {
+.offer .offer_description {
   flex: 1;
   font-family: "Ubuntu", sans-serif;
 }
 
 @media (max-width: 1000px) {
-  #offer .offer_description {
+  .offer .offer_description {
     width: 90vw;
     margin: 0 auto;
   }
 }
 
-#offer .offer_description .description_container {
+.offer .offer_description .description_container {
   position: relative;
   background: linear-gradient(225deg, #ff8f00 0, #ffdc00 75%);
   padding: 30px;
@@ -72,32 +72,32 @@
   transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1), box-shadow 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
-#offer .offer_description .description_container:hover {
+.offer .offer_description .description_container:hover {
   transform: translateY(-2px);
   box-shadow: 0 25px 60px 0 rgba(0, 0, 0, 0.1);
 }
 
 @media (max-width: 600px) {
-  #offer .offer_description .description_container {
+  .offer .offer_description .description_container {
     padding: 1px 8px;
   }
 }
 
-#offer .offer_description .description_container .headline {
+.offer .offer_description .description_container .headline {
   text-align: center;
   margin: 40px 0;
   font-size: 1.5rem;
   text-transform: uppercase;
 }
 
-#offer .offer_description .description_container .description {
+.offer .offer_description .description_container .description {
   margin: 40px;
   font-size: 1.3rem;
   line-height: 2rem;
 }
 
 @media (max-width: 600px) {
-  #offer .offer_description .description_container .description {
+  .offer .offer_description .description_container .description {
     font-size: 1.1rem;
     line-height: 1.7rem;
   }
