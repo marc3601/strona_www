@@ -1,6 +1,6 @@
 {
   "name": "strona_www",
-  "version": "1.9.7",
+  "version": "2.0.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
