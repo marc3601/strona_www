@@ -74,7 +74,7 @@ export default function App() {
     <div className="container">
       <Navigation width={width} scrollDirection={scrollDirection} />
       <Header />
-      <div id="offer">
+      <div id="websites">
         <Offer
           key={1}
           image={"/websites.svg"}
@@ -100,30 +100,32 @@ export default function App() {
           desc={photoDesc}
         />
       </div>
-      <Headline />
-      {width <= 600 ? (
-        <Slider images={images} imgVisible={1} width={width} />
-      ) : (
-        <Slider images={images} imgVisible={width > 1300 ? 3 : 2} />
-      )}
-      <Modal />
-      <Menu width={width} />
-      <ElementHead
-        title="FAQ"
-        description="Sekcja najczęściej zadawanych pytań pozwoli odpowiedzieć na często powtarzające się pytania."
-      />
-      <Questions
-        question="Jaki koszt wykonania strony?"
-        answer="Jest to zawsze ustalane indywidualnie w zależności od stopnia skomplikowania."
-      />
-      <Questions
-        question="Jaki czas oczekiwania na wykonanie?"
-        answer="Zależy to od ilości zleceń w danym okresie. Zazwyczaj ok. tygodnia."
-      />
-      <Questions
-        question="Zakup domeny w cenie?"
-        answer="Tak, usługa obejmuje również zakup hostingu i domeny."
-      />
+      <div id="offer">
+        <Headline />
+        {width <= 600 ? (
+          <Slider images={images} imgVisible={1} width={width} />
+        ) : (
+          <Slider images={images} imgVisible={width > 1300 ? 3 : 2} />
+        )}
+        <Modal />
+        <Menu width={width} />
+        <ElementHead
+          title="FAQ"
+          description="Sekcja najczęściej zadawanych pytań pozwoli odpowiedzieć na często powtarzające się pytania."
+        />
+        <Questions
+          question="Jaki koszt wykonania strony?"
+          answer="Jest to zawsze ustalane indywidualnie w zależności od stopnia skomplikowania."
+        />
+        <Questions
+          question="Jaki czas oczekiwania na wykonanie?"
+          answer="Proste strony mogą być gotowe już w jeden tydzień."
+        />
+        <Questions
+          question="Czy zakup domeny jest w cenie?"
+          answer="Tak, usługa obejmuje również zakup hostingu i domeny."
+        />
+      </div>
       <Contact />
     </div>
   );

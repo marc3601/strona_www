@@ -3,24 +3,20 @@ import "./Navigation.css";
 
 const Navigation = ({ width, scrollDirection }) => {
   const [isActive, setActive] = useState(false);
-  const [preventTransit, setPrevent] = useState({transition: ".5s ease"})
+  const [preventTransit, setPrevent] = useState({ transition: ".5s ease" });
 
   const handleBurger = () => {
     setActive(!isActive);
   };
-  const defaultLink = (e) => {
-    e.preventDefault();
-  };
-
   const cond = scrollDirection === "down";
   const navHide = cond ? { transform: "translateY(-70px)" } : null;
 
   useEffect(() => {
     window.addEventListener("resize", () => {
-      setPrevent({transition: "none"});
-      setTimeout(()=>{
-        setPrevent({transition: ".5s ease"});
-      },10)
+      setPrevent({ transition: "none" });
+      setTimeout(() => {
+        setPrevent({ transition: ".5s ease" });
+      }, 10);
     });
   }, []);
 
@@ -28,17 +24,17 @@ const Navigation = ({ width, scrollDirection }) => {
     <div className="navigation_buttons">
       <ul>
         <li>
-          <a onClick={handleBurger} href="#offer">
+          <a onClick={handleBurger} href="#websites">
             Strony internetowe
           </a>
         </li>
         <li>
-          <a onClick={handleBurger} href="/">
+          <a onClick={handleBurger} href="#offer">
             Oferta
           </a>
         </li>
         <li>
-          <a onClick={defaultLink} href="/">
+          <a onClick={handleBurger} href="#contact">
             Kontakt
           </a>
         </li>
@@ -46,7 +42,7 @@ const Navigation = ({ width, scrollDirection }) => {
     </div>
   );
   return (
-    <div className="navigation" style={{...navHide, ...preventTransit}}>
+    <div className="navigation" style={{ ...navHide, ...preventTransit }}>
       <div className="navigation_logo">
         <p className="logo">{`< WEB DEV />`}</p>
       </div>
